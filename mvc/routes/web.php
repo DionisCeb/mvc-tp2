@@ -5,13 +5,13 @@ use App\Routes\Route;
 Route::get('/home', 'HomeController@index');
 Route::get('/home-test', 'HomeController@test');
 
-Route::get('/client', 'ClientController@index');
-Route::get('/client/create', 'ClientController@create');
-Route::post('/client/create', 'ClientController@store');
-Route::get('/client/show', 'ClientController@show');
-Route::get('/client/edit', 'ClientController@edit');
-Route::post('/client/edit', 'ClientController@update');
-Route::post('/client/delete', 'ClientController@delete');
+Route::get('/booking', 'ClientController@index');
+Route::get('/booking/create', 'ClientController@create');
+Route::post('/booking/create', 'ClientController@store');
+Route::get('/booking/show', 'ClientController@show');
+Route::get('/booking/edit', 'ClientController@edit');
+Route::post('/booking/edit', 'ClientController@update');
+Route::post('/booking/delete', 'ClientController@delete');
 
 
 
