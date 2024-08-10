@@ -1,5 +1,5 @@
-{{ include('layouts/header.php', {title:'Bookings'})}}
-    <h1>Bookings</h1>
+{{ include('layouts/header.php', {title:'Clients'})}}
+    <h1>Clients</h1>
     <table>
         <thead>
             <tr>
@@ -13,7 +13,7 @@
           {% for client in clients %}
             <tr>
                 <td><a href="{{base}}/client/show?id={{client.id}}">{{ client.name }}</a></td>
-                <td>{{ client.surname}}</td>
+                <td>{{ client.surname }}</td>
                 <td>{{ client.phone }}</td>
                 <td>{{ client.email }}</td>
             </tr>

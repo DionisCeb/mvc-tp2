@@ -14,34 +14,21 @@ class Route {
 
     public static function dispatch(){
        $url = $_SERVER['REQUEST_URI'];
-       $urlSegments = explode('?', $url);; 
+       $urlSegments = explode('?', $url);
        $urlPath = rtrim($urlSegments[0], '/');
        $method = $_SERVER['REQUEST_METHOD'];
+
        foreach(self::$routes as $route){
             if(BASE.$route['url'] == $urlPath && $route['method']== $method){
                 $controllerSegments = explode('@',$route['controller']);
                 $controllerName = "App\\Controllers\\".$controllerSegments[0];
-
                 $methodName = $controllerSegments[1];
 
                 $controllerInstance = new $controllerName();
                 if($method == "GET"){
-                    if(isset($urlSegments[1])){
-                        parse_str($urlSegments[1], $queryParams);
-                        // print_r($urlSegments);
-                        // echo "<br>";
-                        // print_r($queryParams);
-                        $controllerInstance->$methodName($queryParams);
-                    }else{
-                        $controllerInstance->$methodName();
-                    }
-                }elseif($method == "POST"){
-                    if(isset($urlSegments[1])){
-                        parse_str($urlSegments[1], $queryParams);
-                        $controllerInstance->$methodName($_POST, $queryParams);
-                    }else{
-                        $controllerInstance->$methodName($_POST);
-                    }
+                    $controllerInstance->$methodName(isset($urlSegments[1]) ? parse_str($urlSegments[1], $queryParams) : []);
+                } elseif($method == "POST"){
+                    $controllerInstance->$methodName($_POST, isset($urlSegments[1]) ? parse_str($urlSegments[1], $queryParams) : []);
                 }
                 return;
             }
@@ -50,3 +37,4 @@ class Route {
        echo "404 not found";
     }
 }
+?>
