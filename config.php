@@ -1,3 +1,3 @@
 <?php
-define('BASE', '/web-avance/projects/tp2/mvc');
-define('ASSET', '/web-avance/projects/tp2/mvc/public/');
+define('BASE', '/web-avance/projects/mvc-tp2');
+define('ASSET', '/web-avance/projects/mvc-tp2/public/');

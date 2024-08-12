@@ -15,14 +15,8 @@
             <div class="logo-img"><img src="{{asset}}img/nav/logo.jpg" alt="logo_img"></div>
             <h2>Deluxe Location</h2>
         </div>
-        <div class="page-links">
-            <a class="nav-btn" href="">À propos</a>
-            <a class="nav-btn" href="">Catalogue</a>
-            <a class="nav-btn" href="">Équipe</a>
-            <a class="nav-btn" href="">Blog</a>
-        </div>
-        <div class="contact-us">
-            <a class="contact-btn" href="">Contactez-nous</a>
-        </div>
+        {% if isError is empty %}
+        {{ include('layouts/nav.php')}}
+        {% endif %}
     </nav>
-    <main>
+<main>

@@ -13,5 +13,6 @@ Route::get('/booking/show', 'BookingController@show');
 
 
 
+
 Route::dispatch();
 ?>

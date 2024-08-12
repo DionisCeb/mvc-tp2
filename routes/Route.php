@@ -49,6 +49,8 @@ class Route {
             }
        }
        http_response_code(404);
-       echo "404 not found.Dionis";
+       $controllerName = "App\\Controllers\\ExceptionController";
+       $controllerInstance = new $controllerName();
+       $controllerInstance->show404();
     }
 }

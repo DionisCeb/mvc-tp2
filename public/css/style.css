@@ -6,6 +6,9 @@
 @import url(admin-interface/booking-list.css);
 @import url(admin-interface/form-admin-section.css);
 
+/*error css*/
+@import url(error/error.css);
+
 /*footer*/
 @import url(componnents/footer.css);
 
