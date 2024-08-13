@@ -33,3 +33,16 @@
     border-radius: 20px;
     opacity: 0.8;
 }
+
+
+/*span error*/
+.error {
+    color: red;
+    font-size: 10px;
+}
+
+span.error {
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+}

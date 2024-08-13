@@ -25,8 +25,6 @@ table {
   .booking-list-btn {
     padding: 10px;
     border-radius: 10px;
-    
-    border: 2px solid gray;
     background: none;
     cursor: pointer;
     
@@ -43,21 +41,21 @@ table {
   }
 
   /*edit btn*/
-  .booking-list-btn.edit-btn {
+/*   .booking-list-btn.edit-btn {
     color: var(--edit-btn);
     border-color: var(--edit-btn);
-  }
-  .booking-list-btn.edit-btn:hover {
+  } */
+ /*  .booking-list-btn.edit-btn:hover {
     background-color: var(--edit-btn);
     color: white;
-  }
+  } */
 
   /*delete btn*/
-  .booking-list-btn.delete-btn {
+/*   .booking-list-btn.delete-btn {
     color: var(--delete-btn);
     border-color: var(--delete-btn);
-  }
-  .booking-list-btn.delete-btn:hover {
+  } */
+/*   .booking-list-btn.delete-btn:hover {
     background-color: var(--delete-btn);
     color: white;
-  }
+  } */

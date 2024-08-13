@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
     <link rel="stylesheet" href="{{asset}}css/style.css">
-    <script src="{{asset}}js/scrolling.js" defer></script>
-    <script src="{{asset}}js/select-options.js" defer></script>
+    {% if scripts is not empty %}
+        {% for js in scripts %}
+            <script src="{{asset}}js/{{js}}" defer></script>
+        {% endfor %}
+    {% endif %}
 </head>
 <body>
     <nav>

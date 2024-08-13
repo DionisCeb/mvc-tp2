@@ -1,8 +1,8 @@
-{{ include('layouts/header.php', {title:'Supprimer la réservation'})}}
+{{ include('layouts/header.php', {title:'Détails de la réservation'})}}
     <section class="reservation-result-section">
         <div class="confirmation-container">
             <div class="confirmation-header">
-                <h1>Supprimer la réservation <span>{{booking.booking_id}}</span></h1>
+                <h1>Détails de la réservation <span>{{booking.booking_id}}</span></h1>
                 <h2>Du client <span>{{booking.client_name}} {{booking.client_surname}}</span></h2>
                 <!-- <h1>Modifier la réservation numéro {{booking.booking_id}} de {{booking.client_name}} {{booking.client_surname}}</h1> -->
             </div>
@@ -21,7 +21,11 @@
                 <div class="value-confirmation"><p>Modèle de voiture: <span>{{booking.car_model}}</span></p></div>
                 <div class="value-confirmation"><p>Couleur de voiture: <span>{{booking.car_color}}</span></p></div>
             </div>
-            <a href="{{base}}/bookings" class="header-box_btn deals-link return-secondary-btn">Afficher la liste des réservations</a>
-            <a href="booking-edit.php?booking_id=<?php echo $booking['booking_id']; ?>" class="header-box_btn deals-link return-secondary-btn secondary-delete-btn">Supprimer</a>
+            <a href="{{base}}/bookings" class="header-box_btn deals-link return-secondary-btn">Retour à la liste</a>
+           <!--  <a href="{{base}}/booking/show?id={{booking.booking_id}}" class="header-box_btn deals-link return-secondary-btn secondary-edit-btn">Modifier</a>
+            <a href="{{base}}/booking/delete?id={{booking.booking_id}}" class="header-box_btn deals-link return-secondary-btn secondary-delete-btn">Supprimer</a> -->
+
+<!--             <td><a href="{{base}}/booking/show?id={{booking.booking_id}}" class="booking-list-btn edit-btn">Modifier</a></td>
+                    <td><a href="{{base}}/booking/delete?id={{booking.booking_id}}" class="booking-list-btn delete-btn">Supprimer</a></td> -->
         </div>
 {{ include('layouts/footer.php')}}

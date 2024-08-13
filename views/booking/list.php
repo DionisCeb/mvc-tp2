@@ -3,6 +3,8 @@
 <section class="admin-interface">
         <div class="admin-container">
             <h1>Gestion des réservations</h1>
+
+            <a href="{{base}}/home#reserve-sec" class="header-box_btn deals-link return-secondary-btn secondary-edit-btn">Nouvelle réservation</a>
             <table class="booking-list-table">
                 <tr>
                     <th>id</th>
@@ -37,15 +39,56 @@
                     <td>{{booking.car_model}}</td>
                     <td>{{booking.car_color}}</td>
                     
-                    <!-- <td><a href="{{base}}/booking/show?id={{booking.booking_id}}">{{ booking.booking_id }}</a></td> -->
-                    <td><a href="{{base}}/booking?booking_id={{ booking.booking_id }}" class="booking-list-btn edit-btn">Modifier</a></td>
-                    <td><a href="{{base}}/booking?id={{ booking.booking_id }}" class="booking-list-btn delete-btn">Supprimer</a></td>
+                    <td><a href="{{base}}/booking/edit?id={{booking.booking_id}}"><img src="{{asset}}img/icons/edit.svg" class="icon-action icon-green " alt="Modifier"></a></td>
+                    <td><button data-id="{{booking.booking_id}}" class="btn-delete"><img src="{{asset}}img/icons/delete.svg" class="icon-action icon-red" alt="Supprimer"></button></td>
                 </tr>
                 {% endfor %}
             </table>
         </div>
-
-        <a href="index.php#reserve-sec" class="header-box_btn deals-link return-secondary-btn secondary-edit-btn">Nouvelle réservation</a>
     </section>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-delete').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            var id = this.getAttribute('data-id');
 
+            
+            // Show confirmation popup
+            var confirmation = confirm('Etes-vous sûr de vouloir supprimer cette réservation?');   
+            if (confirmation) {
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '{{base}}/booking/delete', true);
+                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');               
+                xhr.onload = function() {
+                    if (xhr.status === 200) {                      
+                        var response = JSON.parse(xhr.responseText);
+                        if (response.status === 'success') {                      
+                            alert(response.message);
+                        } else {                         
+                            alert(response.message);      
+                        }
+                        location.reload()
+                    } else {
+                        // Handle the error response here
+                        alert("Erreur lors de la suppression de la réservation");
+                    }
+                };
+                
+                xhr.onerror = function() {
+                    alert('Request failed');
+                };
+                
+
+                var data = 'id=' + encodeURIComponent(id);
+                xhr.send(data);
+            } else {
+                alert('Item deletion canceled.');
+            }
+        });
+    });
+});
+
+</script>
 {{ include('layouts/footer.php')}}

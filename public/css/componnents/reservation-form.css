@@ -14,6 +14,16 @@
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    width: 100%;
+}
+
+.form-reservation input.error {
+    border-color: red;
+}
+
+.reserve-submit {
+    display: flex;
+    gap: 5px;
 }
 
 .reserve-submit input {

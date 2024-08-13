@@ -61,20 +61,20 @@
                                 <option value="blue">Bleue</option>
                             </select>
                             <div class="check-in">
-                                <input type="date" id="check-in-date" name="check-in-date">
-                                <input type="time" id="check-in-time" name="check-in-time">
+                                <input type="date" id="check-in-date" name="check_in_date">
+                                <input type="time" id="check-in-time" name="check_in_time">
                             </div>
                             <div class="check-out">
-                                <input type="date" id="check-out" name="check-out-date">
-                                <input type="time" id="check-out-time" name="check-out-time">
+                                <input type="date" id="check-out" name="check_out_date">
+                                <input type="time" id="check-out-time" name="check_out_time">
                             </div>
                             <div class="name-surname">
-                                <input type="text" name="nom" placeholder="Nom">
-                                <input type="text" name="prenom" placeholder="Prénom">
+                                <input type="text" name="name" placeholder="Nom">
+                                <input type="text" name="surname" placeholder="Prénom">
                             </div>
                             <div class="email-phone">
                                 <input type="email" name="email" placeholder="email@gmail.com">
-                                <input type="tel" name="telephone" placeholder="+1 439 678 9091">
+                                <input type="tel" name="phone" placeholder="+1 439 678 9091">
                             </div>
                             <div class="reserve-submit">
                                 <input type="submit" name="submit" value="Réserver">

@@ -5,6 +5,7 @@ use Twig\Loader\FilesystemLoader;
 use Twig\Environment;
 
 class View{
+
     static public function render($template, $data = []){
         $loader = new FilesystemLoader('views');
         $twig = new Environment($loader);
@@ -16,6 +17,8 @@ class View{
     static function redirect($url){
         header('location:'.BASE.'/'.$url);
     }
+
+
 
     
 }

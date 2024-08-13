@@ -30,9 +30,6 @@ class Route {
                 if($method == "GET"){
                     if(isset($urlSegments[1])){
                         parse_str($urlSegments[1], $queryParams);
-                        // print_r($urlSegments);
-                        // echo "<br>";
-                        // print_r($queryParams);
                         $controllerInstance->$methodName($queryParams);
                     }else{
                         $controllerInstance->$methodName();

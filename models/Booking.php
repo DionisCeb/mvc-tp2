@@ -6,7 +6,8 @@ class Booking extends CRUD{
 
     protected $table = "booking";
     protected $primaryKey = "id";
-    protected $fillable = ['car_id', 'client_id', 'check_in_date', 'check_in_time', 'check_in_time', 'check_out_date'];
+    protected $fillable = ['car_id', 'client_id', 'check_in_date', 'check_in_time', 'check_in_time', 'check_out_date', 'updated_at'];
+
 
     /**
      * Find all bookings with the asociated clients and cars
@@ -60,5 +61,36 @@ class Booking extends CRUD{
         return $booking;
 
     }
-    
-} 
+
+    /**
+     * retrieve car from booking
+     */
+
+     public function getCarIdByBookingId($booking_id) {
+        $sql = "SELECT car_id FROM booking WHERE id = :booking_id";
+        $stmt = $this->prepare($sql);
+        $stmt->bindValue(':booking_id', $booking_id, \PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $result['car_id'] ?? null;
+    }
+
+
+    /**
+     * retrieve client from booking
+     */
+    public function getClientIdByBookingId($booking_id) {
+        $sql = "SELECT client_id FROM booking WHERE id = :booking_id";
+        $stmt = $this->prepare($sql);
+        $stmt->bindValue(':booking_id', $booking_id, \PDO::PARAM_INT);
+        $stmt->execute();
+        $result = $stmt->fetch(\PDO::FETCH_ASSOC);
+        return $result['client_id'] ?? null;
+    }
+
+
+    /**
+     * Update Booking data
+     */
+
+}

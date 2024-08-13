@@ -5,11 +5,21 @@ use App\Routes\Route;
 Route::get('/home', 'HomeController@index');
 Route::get('', 'HomeController@index');
 
+/**creer une reservation*/
+Route::get('/home#reserve-sec', 'BookingController@create');
+Route::post('/home#reserve-sec', 'BookingController@store');
 /*reservations liste*/
 Route::get('/bookings', 'BookingController@list');
 
 /*reservation specifique*/
 Route::get('/booking/show', 'BookingController@show');
+
+/*modifier la réservation*/
+Route::get('/booking/edit', 'BookingController@edit');
+Route::post('/booking/edit', 'BookingController@update');
+
+/*supprimer une reservation*/
+Route::post('/booking/delete', 'BookingController@delete');
 
 
 
