@@ -2,7 +2,6 @@
 @import url(../componnents/table.css);
 .admin-interface {
     display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 20px;
     background-color: rgb(187 184 179);
@@ -24,3 +23,38 @@
     color: #8b5720;
 }
 
+
+
+/*icons*/
+.icon-action {
+    width: 1rem;
+    height: 1rem;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: opacity 0.5s, transform 1.5s;
+}
+
+/*hover*/
+.icon-action:hover {
+    opacity: 70%;
+    scale: 1.25;
+}
+
+.icon-action:active {
+    scale: 0.8;
+}
+
+.icon-red {
+    background-color: red;
+}
+.icon-green {
+    background-color: green;
+}
+
+/*remove the styles for icon btns*/
+button.btn-delete {
+    background: none;
+    border: none;
+}

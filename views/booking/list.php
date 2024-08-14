@@ -4,7 +4,7 @@
         <div class="admin-container">
             <h1>Gestion des réservations</h1>
 
-            <a href="{{base}}/home#reserve-sec" class="header-box_btn deals-link return-secondary-btn secondary-edit-btn">Nouvelle réservation</a>
+            <a href="{{base}}/booking/create" class="header-box_btn deals-link return-secondary-btn secondary-edit-btn">Nouvelle réservation</a>
             <table class="booking-list-table">
                 <tr>
                     <th>id</th>
@@ -14,14 +14,14 @@
                     <th>Téléphone</th>
                     <th>Date d'arrivée</th>
                     <th>L'heure d'arrivée</th>
-                    <th>Jour de retour</th>
+                    <th>Date de retour</th>
                     <th>L'heure de retour</th>
                     <th>Type de voiture</th>
                     <th>Marque de voiture</th>
                     <th>Modèle de voiture</th>
                     <th>Couleur de la voiture</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Modifier</th>
+                    <th>Supprimer</th>
                 </tr>
                 {% for booking in bookings %}
                 <tr>
@@ -77,14 +77,14 @@
                 };
                 
                 xhr.onerror = function() {
-                    alert('Request failed');
+                    alert('La demande a échoué');
                 };
                 
 
                 var data = 'id=' + encodeURIComponent(id);
                 xhr.send(data);
             } else {
-                alert('Item deletion canceled.');
+                alert("Suppression de l'élément annulée.");
             }
         });
     });

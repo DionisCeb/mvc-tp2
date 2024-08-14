@@ -14,12 +14,35 @@
     align-items: center;
 }
 
+/*left section book now*/
+.deals__create-booking {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+/*title*/
+.create-booking__title {
+    font-size: 40px;
+    color: rgb(138, 73, 73);
+    font-weight: bold;
+}
+
+/*title*/
+.create-booking__subtitle {
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+/*button link*/
+.create-booking__link {
+    display: flex;
+}
 
 .container__form-deals {
     display: flex;
     justify-content: center;
     gap: 50px;
-    /* align-items: center; */
+    align-items: center;
 }
 
 /*deals box*/

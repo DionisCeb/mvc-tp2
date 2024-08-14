@@ -43,6 +43,18 @@
 
 span.error {
     float: left;
-    width: 100%;
+    width: 95%;
     margin-top: 5px;
+    background: #8d4646;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    /* font-size: 14px; */
+    padding: 10px;
+}
+
+.error-div {
+    /* background: aliceblue; */
+    gap: 10px;
+    display: flex;
 }

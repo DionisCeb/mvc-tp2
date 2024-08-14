@@ -46,22 +46,3 @@ header {
     width: 80%;
 }
 
-
-
-
-
-/*icons*/
-.icon-action {
-    width: 1rem;
-    height: 1rem;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-}
-
-.icon-red {
-    background-color: red;
-}
-.icon-green {
-    background-color: green;
-}

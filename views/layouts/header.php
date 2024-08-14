@@ -15,11 +15,11 @@
 <body>
     <nav>
         <div class="logo">
-            <div class="logo-img"><img src="{{asset}}img/nav/logo.jpg" alt="logo_img"></div>
+            <div class="logo-img"><a href="{{base}}/home"><img src="{{asset}}img/nav/logo.jpg" alt="logo_img"></a></div>
             <h2>Deluxe Location</h2>
         </div>
         {% if isError is empty %}
-        {{ include('layouts/nav.php')}}
+            {{ include('layouts/nav.php')}}
         {% endif %}
     </nav>
 <main>

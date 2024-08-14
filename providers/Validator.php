@@ -52,7 +52,7 @@ class Validator {
             $d = \DateTime::createFromFormat($format, $this->value);
             // Check if the date is valid and matches the format
             if(!($d && $d->format($format) === $this->value)) {
-                $this->errors[$this->key] = "Invalid $this->name format, must be : " . $format;
+                $this->errors[$this->key] = "Invalid $this->name format, must be : " . $format . " ," . $this->value . " is given.";
             }
         }
         return $this;
@@ -62,17 +62,21 @@ class Validator {
      * Validate time against format H:i:s
      */
     public function time() {
-        if(!empty($this->value)){
-            // Define the regular expression for validating HH:mm:ss format
-            $pattern = '/^([01]\d|2[0-3]):([0-5]\d):([0-5]\d)$/';
+        if (!empty($this->value)) {
+            // Define the regular expression for validating HH:mm format
+            $pattern = '/^([01]\d|2[0-3]):([0-5]\d)$/';
 
+            // Remove seconds by extracting only hours and minutes
+            $value = substr($this->value, 0, 5); // Extract HH:mm
+    
             // Check if the time matches the regular expression
-            if (!preg_match($pattern, $this->value)) {
-                $this->errors[$this->key] = "Invalid $this->name format, must be H:i:s";
+            if (!preg_match($pattern, $value)) {
+                $this->errors[$this->key] = "Invalid $this->name format, must be H:i. " . $this->value . " is given.";
             }
         }
         return $this;
     }
+    
 
     public function isSuccess(){
         if(empty($this->errors)) return true;

@@ -27,7 +27,6 @@
                             <option value="audi" {% if booking.car_make == 'audi' %}selected{% endif %}>Audi</option>
                             <option value="mercedes" {% if booking.car_make == 'mercedes' %}selected{% endif %}>Mercedes</option>
                             <option value="toyota" {% if booking.car_make == 'toyota' %}selected{% endif %}>Toyota</option>
-                            <option value="ford-f150" data-make="ford" data-type="suv">Ford F-150</option>
                         </select>
                         {% if errors.make is defined %}
                             <span class="error">{{ errors.make }}</span>
@@ -47,7 +46,6 @@
                             <option value="toyota Supra" {% if booking.car_model == 'toyota Supra' %}selected{% endif %}>Supra</option>
                             <option value="toyota Tacoma" {% if booking.car_model == 'toyota Tacoma' %}selected{% endif %}>Tacoma</option>
                             <option value="toyota Tundra" {% if booking.car_model == 'toyota Tundra' %}selected{% endif %}>Tundra</option>
-                            <option value="ford F-150" {% if booking.car_model == 'ford F-150' %}selected{% endif %}>F-150</option>
                         </select>
                         {% if errors.model is defined %}
                             <span class="error">{{ errors.model }}</span>
@@ -57,10 +55,10 @@
                     <div>
                         <select name="color" id="color" class="{% if errors.color is defined %}error{% endif %}">
                             <option value="">Choisir la couleur</option>
-                            <option value="white" {% if booking.car_color == 'blanche' %}selected{% endif %}>Blanche</option>
-                            <option value="gray" {% if booking.car_color == 'gris' %}selected{% endif %}>Grise</option>
-                            <option value="black" {% if booking.car_color == 'noire' %}selected{% endif %}>Noire</option>
-                            <option value="blue" {% if booking.car_color == 'bleue' %}selected{% endif %}>Bleue</option>
+                            <option value="blanche" {% if booking.car_color == 'blanche' %}selected{% endif %}>Blanche</option>
+                            <option value="gris" {% if booking.car_color == 'gris' %}selected{% endif %}>Grise</option>
+                            <option value="noire" {% if booking.car_color == 'noire' %}selected{% endif %}>Noire</option>
+                            <option value="bleue" {% if booking.car_color == 'bleue' %}selected{% endif %}>Bleue</option>
                         </select>
                         {% if errors.color is defined %}
                             <span class="error">{{ errors.color }}</span>

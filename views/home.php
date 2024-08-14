@@ -21,66 +21,16 @@
         <div class="structure">
             <div class="reservation-boxes-container">             
                     <div class="container__form-deals">
-                        <div class="form-box">
-                        <form class="form-reservation" action="process_reservation.php" method="POST">
-                            <select name="type" id="type">
-                                <option value="">Choisir le type</option>
-                                <option value="compact">Compacte</option>
-                                <option value="sport">Sport</option>
-                                <option value="suv">SUV</option>
-                                <option value="luxury">Voitures de luxe</option>
-                                <option value="sedan">Sedan</option>
-                            </select>
-                            <select name="make" id="make">
-                                <option value="">Choisir la marque</option>
-                                <option value="audi">Audi</option>
-                                <option value="mercedes">Mercedes</option>
-                                <option value="toyota">Toyota</option>
-                                <option value="ford">Ford</option>
-                            </select>
-                            <select name="model" id="model">
-                                <option value="">Choisir le modèle</option>
-                                <option value="audi-a3" data-make="audi" data-type="compact">Audi A3</option>
-                                <option value="audi-a4" data-make="audi" data-type="sedan">Audi A4</option>
-                                <option value="audi-r8" data-make="audi" data-type="sport">Audi R8</option>
-                                <option value="mercedes-c-class" data-make="mercedes" data-type="sedan">Mercedes C-class</option>
-                                <option value="mercedes-a-class" data-make="mercedes" data-type="compact">Mercedes A-class</option>
-                                <option value="mercedes-s-class" data-make="mercedes" data-type="luxury">Mercedes S-class</option>
-                                <option value="mercedes-amg-gt" data-make="mercedes" data-type="sport">Mercedes AMG-GT</option>
-                                <option value="toyota-supra" data-make="toyota" data-type="sport">Toyota Supra</option>
-                                <option value="toyota-tacoma" data-make="toyota" data-type="suv">Toyota Tacoma</option>
-                                <option value="toyota-tundra" data-make="toyota" data-type="suv">Toyota Tundra</option>
-                                <option value="ford-f150" data-make="ford" data-type="suv">Ford F-150</option>
-                                <option value="ford-mustang" data-make="ford" data-type="sport">Ford Mustang</option>
-                            </select>
-                            <select name="color" id="color">
-                                <option value="">Choisir la couleur</option>
-                                <option value="white">Blanche</option>
-                                <option value="gray">Grise</option>
-                                <option value="black">Noire</option>
-                                <option value="blue">Bleue</option>
-                            </select>
-                            <div class="check-in">
-                                <input type="date" id="check-in-date" name="check_in_date">
-                                <input type="time" id="check-in-time" name="check_in_time">
+                        <div class="deals__create-booking">
+                            <div class="create-booking__title">
+                                <h1>Réservez maintenant</h1>
                             </div>
-                            <div class="check-out">
-                                <input type="date" id="check-out" name="check_out_date">
-                                <input type="time" id="check-out-time" name="check_out_time">
+                            <div class="create-booking__subtitle">
+                                <h3>Les meilleures réductions cette semaine</h3>
                             </div>
-                            <div class="name-surname">
-                                <input type="text" name="name" placeholder="Nom">
-                                <input type="text" name="surname" placeholder="Prénom">
+                            <div class="create-booking__link">
+                                <a href="{{base}}/booking/create" class="header-box_btn deals-link">Réservez</a>
                             </div>
-                            <div class="email-phone">
-                                <input type="email" name="email" placeholder="email@gmail.com">
-                                <input type="tel" name="phone" placeholder="+1 439 678 9091">
-                            </div>
-                            <div class="reserve-submit">
-                                <input type="submit" name="submit" value="Réserver">
-                            </div>
-                        </form>
-
                         </div>
                         <div class="deals-box">
                             <h1 class="deals-title">
