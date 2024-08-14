@@ -35,10 +35,16 @@
                                     <option value="audi A3" data-make="audi" data-type="compact">Audi A3</option>
                                     <option value="audi A4" data-make="audi" data-type="sedan">Audi A4</option>
                                     <option value="audi R8" data-make="audi" data-type="sport">Audi R8</option>
+                                    <option value="audi Q8" data-make="audi" data-type="suv">Audi Q8</option>
                                     <option value="mercedes C-class" data-make="mercedes" data-type="sedan">Mercedes C-class</option>
                                     <option value="mercedes A-class" data-make="mercedes" data-type="compact">Mercedes A-class</option>
+                                    <option value="mercedes G-class" data-make="mercedes" data-type="suv">Mercedes G-class</option>
                                     <option value="mercedes S-class" data-make="mercedes" data-type="luxury">Mercedes S-class</option>
+                                    <option value="mercedes AMG-GT" data-make="mercedes" data-type="sport">Mercedes AMG-GT</option>
                                     <option value="toyota Supra" data-make="toyota" data-type="sport">Toyota Supra</option>
+                                    <option value="toyota Camry" data-make="toyota" data-type="compact">Toyota Camry</option>
+                                    <option value="toyota Corolla" data-make="toyota" data-type="sedan">Toyota Corolla</option>
+                                    <option value="toyota Land Cruiser" data-make="toyota" data-type="luxury">Toyota Land Cruiser</option>
                                     <option value="toyota Tacoma" data-make="toyota" data-type="suv">Toyota Tacoma</option>
                                     <option value="toyota Tundra" data-make="toyota" data-type="suv">Toyota Tundra</option>
                                 </select>

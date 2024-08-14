@@ -40,10 +40,16 @@
                             <option value="audi A3" {% if booking.car_model == 'audi A3' %}selected{% endif %}>A3</option>
                             <option value="audi A4" {% if booking.car_model == 'audi A4' %}selected{% endif %}>A4</option>
                             <option value="audi R8" {% if booking.car_model == 'audi R8' %}selected{% endif %}>R8</option>
+                            <option value="audi Q8" {% if booking.car_model == 'audi Q8' %}selected{% endif %}>R8</option>
                             <option value="mercedes C-class" {% if booking.car_model == 'mercedes C-class' %}selected{% endif %}>C-class</option>
                             <option value="mercedes A-class" {% if booking.car_model == 'mercedes A-class' %}selected{% endif %}>A-class</option>
+                            <option value="mercedes G-class" {% if booking.car_model == 'mercedes G-class' %}selected{% endif %}>G-class</option>
                             <option value="mercedes S-class" {% if booking.car_model == 'mercedes S-class' %}selected{% endif %}>S-class</option>
+                            <option value="mercedes AMG-GT" {% if booking.car_model == 'mercedes AMG-GT' %}selected{% endif %}>AMG-GT-class</option>
                             <option value="toyota Supra" {% if booking.car_model == 'toyota Supra' %}selected{% endif %}>Supra</option>
+                            <option value="toyota Camry" {% if booking.car_model == 'toyota Camry' %}selected{% endif %}>Camry</option>
+                            <option value="toyota Corolla" {% if booking.car_model == 'toyota Corolla' %}selected{% endif %}>Corolla</option>
+                            <option value="toyota Land Cruiser" {% if booking.car_model == 'toyota Camry' %}selected{% endif %}>Land Cruiser</option>
                             <option value="toyota Tacoma" {% if booking.car_model == 'toyota Tacoma' %}selected{% endif %}>Tacoma</option>
                             <option value="toyota Tundra" {% if booking.car_model == 'toyota Tundra' %}selected{% endif %}>Tundra</option>
                         </select>
