@@ -108,6 +108,7 @@ class Validator {
         }
         return $this;
     }
+
     
     /**
      * Vérifier si la validation a réussi (pas d'erreurs)

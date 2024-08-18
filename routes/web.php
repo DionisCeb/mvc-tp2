@@ -21,6 +21,15 @@ Route::post('/booking/edit', 'BookingController@update');
 /*supprimer une reservation*/
 Route::post('/booking/delete', 'BookingController@delete');
 
+/* USER CREATE */
+Route::get('/user/create', 'UserController@create');
+Route::post('/user/create', 'UserController@store');
+
+
+Route::get('/login', 'AuthController@index');
+Route::post('/login', 'AuthController@store');
+
+
 
 
 Route::dispatch();

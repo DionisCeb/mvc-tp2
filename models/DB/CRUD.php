@@ -3,7 +3,7 @@ namespace App\Models\DB;
 
 abstract class CRUD extends \PDO{
    final public function __construct(){
-        parent::__construct('mysql:host=localhost;dbname=car_rent;port=3000; charset=utf8', 'root','');
+        parent::__construct('mysql:host=localhost;dbname=car_rent;port=3306; charset=utf8', 'root','');
     }
 
    final public function select($field = null, $order = 'ASC'){

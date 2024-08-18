@@ -1,5 +1,5 @@
 .form-box .form-reservation{
-    background-color: #bfbfbf;
+    background-color: var(--general-color-forms);
     border-radius: 10px;
     padding: 20px;
     display: flex;

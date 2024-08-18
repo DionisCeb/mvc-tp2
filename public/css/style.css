@@ -6,6 +6,9 @@
 @import url(admin-interface/booking-list.css);
 @import url(admin-interface/form-admin-section.css);
 
+/*forms*/
+@import url(componnents/form.css);
+
 /*error css*/
 @import url(error/error.css);
 
@@ -14,6 +17,9 @@
 
 /*animations*/
 @import url(animations/animations.css);
+
+/*utils*/
+@import url(utils/utils.css);
 
 
 *{
